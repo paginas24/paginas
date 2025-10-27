@@ -74,9 +74,17 @@
             background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), url('images/hero-bg.jpg');
             background-size: cover;
             background-position: center;
+            background-repeat: no-repeat;
             color: white;
             padding: 100px 0;
             text-align: center;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .hero-content {
+            width: 100%;
         }
         
         .hero h1 {
@@ -89,6 +97,7 @@
             font-size: 1.2rem;
             max-width: 700px;
             margin: 0 auto 30px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
         }
         
         .price-tag {
@@ -100,6 +109,7 @@
             font-size: 1.5rem;
             font-weight: bold;
             margin-bottom: 30px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
         }
         
         .btn-whatsapp {
@@ -122,9 +132,10 @@
             box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
         }
         
-        .btn-whatsapp i {
+        .btn-whatsapp svg {
             margin-right: 10px;
-            font-size: 1.3rem;
+            width: 24px;
+            height: 24px;
         }
         
         /* Sección de características */
@@ -170,9 +181,10 @@
         }
         
         .feature-icon {
-            font-size: 2.5rem;
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
             color: #3498db;
-            margin-bottom: 20px;
         }
         
         .feature-card h3 {
@@ -202,7 +214,11 @@
             align-items: center;
             justify-content: center;
             margin: 0 auto 30px;
-            font-size: 2.5rem;
+        }
+        
+        .guarantee-badge svg {
+            width: 50px;
+            height: 50px;
         }
         
         /* CTA Section */
@@ -266,7 +282,6 @@
             color: #FFF;
             border-radius: 50px;
             text-align: center;
-            font-size: 30px;
             box-shadow: 2px 2px 3px #999;
             z-index: 100;
             animation: pulse 2s infinite;
@@ -274,6 +289,11 @@
             align-items: center;
             justify-content: center;
             text-decoration: none;
+        }
+        
+        .whatsapp-float svg {
+            width: 30px;
+            height: 30px;
         }
         
         @keyframes pulse {
@@ -290,6 +310,11 @@
         
         /* Responsive */
         @media (max-width: 768px) {
+            .hero {
+                padding: 60px 0;
+                min-height: 500px;
+            }
+            
             .hero h1 {
                 font-size: 2rem;
             }
@@ -307,13 +332,25 @@
                 height: 50px;
                 bottom: 20px;
                 right: 20px;
-                font-size: 25px;
+            }
+            
+            .whatsapp-float svg {
+                width: 25px;
+                height: 25px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                padding: 40px 0;
+                min-height: 400px;
+            }
+            
+            .hero h1 {
+                font-size: 1.8rem;
             }
         }
     </style>
-    
-    <!-- Font Awesome para iconos -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <!-- Header -->
@@ -331,12 +368,17 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1>Elimina Tus Deudas de Tránsito de Forma Legal y Definitiva</h1>
-            <p>¿Tienes comparendos, fotomultas o cobros coactivos? Te ayudamos a eliminarlos de manera jurídica. Expertos en resolución de casos en todo el país.</p>
-            <div class="price-tag">Desde $95.000</div>
-            <a href="https://wa.me/573127593036" class="btn-whatsapp" target="_blank">
-                <i class="fab fa-whatsapp"></i> Contáctanos por WhatsApp
-            </a>
+            <div class="hero-content">
+                <h1>Elimina Tus Deudas de Tránsito de Forma Legal y Definitiva</h1>
+                <p>¿Tienes comparendos, fotomultas o cobros coactivos? Te ayudamos a eliminarlos de manera jurídica. Expertos en resolución de casos en todo el país.</p>
+                <div class="price-tag">Desde $95.000</div>
+                <a href="https://wa.me/573127593036" class="btn-whatsapp" target="_blank">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893-.001-3.189-1.248-6.189-3.515-8.452"/>
+                    </svg>
+                    Contáctanos por WhatsApp
+                </a>
+            </div>
         </div>
     </section>
 
@@ -350,28 +392,37 @@
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <i class="fas fa-car-crash"></i>
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5H15V3H9v2H6.5c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/>
+                        </svg>
                     </div>
                     <h3>Comparendos</h3>
                     <p>Eliminamos todo tipo de comparendos por infracciones de tránsito, sin importar su antigüedad.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <i class="fas fa-camera"></i>
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 12c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm6-1.8C18 6.57 15.35 4 12 4s-6 2.57-6 6.2c0 2.34 1.95 5.44 6 9.14 4.05-3.7 6-6.8 6-9.14zM12 2c4.2 0 8 3.22 8 8.2 0 3.32-2.67 7.25-8 11.8-5.33-4.55-8-8.48-8-11.8C4 5.22 7.8 2 12 2z"/>
+                        </svg>
                     </div>
                     <h3>Fotomultas</h3>
                     <p>Librate de las fotomultas y cámaras de seguridad que detectan infracciones automáticamente.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <i class="fas fa-gavel"></i>
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 1l9 4v6c0 5.55-3.84 10.74-9 12-5.16-1.26-9-6.45-9-12V5l9-4zm0 2.18L5 6.3v4.92C5 15.54 8.25 20 12 21c3.75-1 7-5.46 7-9.78V6.3l-7-3.12z"/>
+                            <path d="M12 7c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3z"/>
+                        </svg>
                     </div>
                     <h3>Cobros Coactivos</h3>
                     <p>Resolvemos procesos de cobro coactivo iniciados por entidades de tránsito a nivel nacional.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <i class="fas fa-file-contract"></i>
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
+                        </svg>
                     </div>
                     <h3>Acuerdos de Pago</h3>
                     <p>Cancelamos acuerdos de pago pendientes y te ayudamos a regularizar tu situación.</p>
@@ -385,7 +436,9 @@
         <div class="container">
             <div class="guarantee-content">
                 <div class="guarantee-badge">
-                    <i class="fas fa-shield-alt"></i>
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/>
+                    </svg>
                 </div>
                 <h2>Garantía de Resultados</h2>
                 <p>En <strong>Eliminación Jurídica de Deudas de Tránsito</strong> trabajamos con transparencia y honestidad. <strong>No solicitamos dinero de anticipo</strong>, solo pagas cuando hayamos eliminado exitosamente tus deudas de tránsito. Confía en expertos especializados en resolución de casos en todo el país.</p>
@@ -399,7 +452,10 @@
             <h2>¿Listo para Liberarte de Tus Deudas de Tránsito?</h2>
             <p>Contáctanos hoy mismo para una consulta gratuita. Nuestros especialistas evaluarán tu caso y te explicarán el proceso paso a paso.</p>
             <a href="https://wa.me/573127593036" class="btn-whatsapp" target="_blank">
-                <i class="fab fa-whatsapp"></i> Consulta Gratuita por WhatsApp
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893-.001-3.189-1.248-6.189-3.515-8.452"/>
+                </svg>
+                Consulta Gratuita por WhatsApp
             </a>
         </div>
     </section>
@@ -421,12 +477,13 @@
 
     <!-- Botón flotante de WhatsApp -->
     <a href="https://wa.me/573127593036" class="whatsapp-float" target="_blank">
-        <i class="fab fa-whatsapp"></i>
+        <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893-.001-3.189-1.248-6.189-3.515-8.452"/>
+        </svg>
     </a>
 
     <script>
         // Código para optimización de Google Ads
-        // Evitar contenido engañoso o spam
         document.addEventListener('DOMContentLoaded', function() {
             // Asegurar que todos los enlaces externos tengan target="_blank"
             const externalLinks = document.querySelectorAll('a[href^="http"]');
