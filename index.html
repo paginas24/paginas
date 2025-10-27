@@ -1,544 +1,405 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<!-- Event snippet for Vista de una página conversion page
-In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
-<script>
-function gtag_report_conversion(url) {
-  var callback = function () {
-    if (typeof(url) != 'undefined') {
-      window.location = url;
-    }
-  };
-  gtag('event', 'conversion', {
-      'send_to': 'AW-17639042015/21UQCKOdnaobEN_X-dpB',
-      'value': 1.0,
-      'currency': 'COP',
-      'event_callback': callback
-  });
-  return false;
-}
-</script>
-
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17639042015"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-17639042015');
-</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eliminación Jurídica de Multas de Tránsito</title>
+    <meta name="description" content="Eliminación Jurídica de Deudas de Tránsito - Eliminamos comparendos, fotomultas, cobros coactivos y acuerdos de pago. Precio desde $95.000. Solo pagas cuando te eliminemos.">
+    <title>Eliminación Jurídica de Deudas de Tránsito | Elimina Multas y Comparendos</title>
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+    
     <style>
-        /* Estilos generales */
-        :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #3498db;
-            --accent-color: #e74c3c;
-            --light-color: #ecf0f1;
-            --dark-color: #2c3e50;
-            --text-color: #333;
-            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
+        /* Reset y estilos base */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-        }
-
-        body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
             line-height: 1.6;
-            color: var(--text-color);
+            color: #333;
             background-color: #f9f9f9;
         }
-
+        
         .container {
             width: 90%;
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 15px;
         }
-
+        
         /* Header */
         header {
-            background-color: white;
-            box-shadow: var(--shadow);
-            position: fixed;
-            width: 100%;
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
             top: 0;
             z-index: 1000;
         }
-
-        .header-container {
+        
+        .header-content {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 15px 0;
         }
-
+        
         .logo {
             display: flex;
             align-items: center;
         }
-
+        
         .logo-img {
             height: 50px;
             margin-right: 10px;
         }
-
+        
         .logo-text {
             font-size: 1.2rem;
-            font-weight: bold;
-            color: var(--primary-color);
+            font-weight: 700;
+            color: #2c3e50;
         }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
-
-        nav ul li {
-            margin-left: 20px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: var(--dark-color);
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        nav ul li a:hover {
-            color: var(--secondary-color);
-        }
-
-        .mobile-menu {
-            display: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
-
+        
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
-            height: 80vh;
-            display: flex;
-            align-items: center;
+            background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), url('images/hero-bg.jpg');
+            background-size: cover;
+            background-position: center;
             color: white;
+            padding: 100px 0;
             text-align: center;
-            margin-top: 80px;
         }
-
-        .hero-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
+        
         .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-        }
-
-        .btn {
-            display: inline-block;
-            background-color: var(--accent-color);
-            color: white;
-            padding: 12px 30px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: background-color 0.3s, transform 0.3s;
-            box-shadow: var(--shadow);
-        }
-
-        .btn:hover {
-            background-color: #c0392b;
-            transform: translateY(-3px);
-        }
-
-        /* Sección de Precio */
-        .pricing {
-            padding: 80px 0;
-            background-color: white;
-            text-align: center;
-        }
-
-        .section-title {
             font-size: 2.5rem;
             margin-bottom: 20px;
-            color: var(--primary-color);
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
         }
-
-        .section-subtitle {
+        
+        .hero p {
             font-size: 1.2rem;
-            margin-bottom: 50px;
-            color: #666;
+            max-width: 700px;
+            margin: 0 auto 30px;
         }
-
-        .price-card {
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: var(--shadow);
-            padding: 40px 30px;
-            max-width: 400px;
-            margin: 0 auto;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .price-badge {
-            position: absolute;
-            top: 0;
-            right: 0;
-            background-color: var(--accent-color);
+        
+        .price-tag {
+            background-color: #e74c3c;
             color: white;
+            display: inline-block;
             padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1.5rem;
             font-weight: bold;
-            transform: rotate(45deg) translate(30px, -15px);
-            width: 150px;
-            text-align: center;
+            margin-bottom: 30px;
         }
-
-        .price {
-            font-size: 3rem;
+        
+        .btn-whatsapp {
+            background-color: #25D366;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
             font-weight: bold;
-            color: var(--primary-color);
-            margin: 20px 0;
+            font-size: 1.1rem;
+            display: inline-flex;
+            align-items: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
         }
-
-        .price-period {
-            font-size: 1rem;
-            color: #666;
+        
+        .btn-whatsapp:hover {
+            background-color: #128C7E;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
         }
-
-        .price-features {
-            list-style: none;
-            margin: 30px 0;
-            text-align: left;
+        
+        .btn-whatsapp i {
+            margin-right: 10px;
+            font-size: 1.3rem;
         }
-
-        .price-features li {
-            padding: 10px 0;
-            border-bottom: 1px solid #eee;
-            position: relative;
-            padding-left: 30px;
-        }
-
-        .price-features li:before {
-            content: "✓";
-            color: #2ecc71;
-            position: absolute;
-            left: 0;
-            font-weight: bold;
-        }
-
-        /* Sección de Características */
+        
+        /* Sección de características */
         .features {
             padding: 80px 0;
-            background-color: var(--light-color);
+            background-color: white;
         }
-
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            color: #2c3e50;
+        }
+        
+        .section-title h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+        
+        .section-title p {
+            color: #7f8c8d;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 30px;
-            margin-top: 50px;
         }
-
+        
         .feature-card {
-            background-color: white;
-            border-radius: 10px;
-            padding: 30px;
-            box-shadow: var(--shadow);
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 30px 20px;
             text-align: center;
-            transition: transform 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
         }
-
+        
         .feature-card:hover {
             transform: translateY(-10px);
         }
-
+        
         .feature-icon {
-            font-size: 3rem;
-            color: var(--secondary-color);
+            font-size: 2.5rem;
+            color: #3498db;
             margin-bottom: 20px;
         }
-
-        .feature-title {
-            font-size: 1.5rem;
+        
+        .feature-card h3 {
             margin-bottom: 15px;
-            color: var(--primary-color);
+            color: #2c3e50;
         }
-
-        /* Sección de Garantía */
+        
+        /* Sección de garantía */
         .guarantee {
             padding: 80px 0;
             background-color: white;
             text-align: center;
         }
-
+        
         .guarantee-content {
             max-width: 800px;
             margin: 0 auto;
         }
-
-        .guarantee-icon {
-            font-size: 4rem;
-            color: #2ecc71;
-            margin-bottom: 20px;
+        
+        .guarantee-badge {
+            background-color: #27ae60;
+            color: white;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px;
+            font-size: 2.5rem;
         }
-
-        /* Sección de Contacto */
-        .contact {
+        
+        /* CTA Section */
+        .cta {
             padding: 80px 0;
-            background-color: var(--primary-color);
+            background: linear-gradient(135deg, #3498db, #2c3e50);
             color: white;
             text-align: center;
         }
-
-        .contact p {
-            margin-bottom: 30px;
-            font-size: 1.2rem;
+        
+        .cta h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
         }
-
-        .whatsapp-btn {
-            background-color: #25D366;
-            display: inline-flex;
-            align-items: center;
-            padding: 15px 30px;
-            border-radius: 50px;
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.2rem;
-            transition: background-color 0.3s, transform 0.3s;
-            box-shadow: var(--shadow);
+        
+        .cta p {
+            max-width: 700px;
+            margin: 0 auto 30px;
+            font-size: 1.1rem;
         }
-
-        .whatsapp-btn:hover {
-            background-color: #128C7E;
-            transform: translateY(-3px);
-        }
-
-        .whatsapp-icon {
-            margin-right: 10px;
-            font-size: 1.5rem;
-        }
-
+        
         /* Footer */
         footer {
-            background-color: var(--dark-color);
+            background-color: #2c3e50;
             color: white;
-            padding: 40px 0;
+            padding: 50px 0 20px;
             text-align: center;
         }
-
+        
         .footer-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            margin-bottom: 30px;
         }
-
-        .footer-logo {
+        
+        .footer-info h3 {
             margin-bottom: 20px;
+            font-size: 1.5rem;
         }
-
-        .footer-links {
-            display: flex;
-            list-style: none;
-            margin-bottom: 20px;
+        
+        .footer-info p {
+            max-width: 600px;
+            margin: 0 auto;
+            color: #bdc3c7;
+            line-height: 1.8;
         }
-
-        .footer-links li {
-            margin: 0 15px;
-        }
-
-        .footer-links a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .footer-links a:hover {
-            color: var(--secondary-color);
-        }
-
+        
         .copyright {
-            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #34495e;
+            color: #bdc3c7;
             font-size: 0.9rem;
-            color: #bbb;
         }
-
+        
+        /* Botón flotante de WhatsApp */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 100;
+            animation: pulse 2s infinite;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+        }
+        
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+        
         /* Responsive */
         @media (max-width: 768px) {
-            .header-container {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            nav ul {
-                margin-top: 15px;
-                flex-direction: column;
-            }
-
-            nav ul li {
-                margin: 10px 0;
-            }
-
             .hero h1 {
-                font-size: 2.2rem;
+                font-size: 2rem;
             }
-
+            
             .hero p {
                 font-size: 1rem;
             }
-
-            .section-title {
-                font-size: 2rem;
+            
+            .price-tag {
+                font-size: 1.2rem;
             }
-
-            .mobile-menu {
-                display: block;
-                position: absolute;
-                top: 20px;
+            
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                bottom: 20px;
                 right: 20px;
-            }
-
-            .nav-menu {
-                display: none;
-                width: 100%;
-            }
-
-            .nav-menu.active {
-                display: block;
+                font-size: 25px;
             }
         }
     </style>
+    
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <!-- Header -->
     <header>
-        <div class="container header-container">
-            <div class="logo">
-                <div class="logo-img">⚖️</div>
-                <div class="logo-text">Eliminación Jurídica de Multas de Tránsito</div>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="images/logo.png" alt="Logo Eliminación Jurídica de Deudas de Tránsito" class="logo-img">
+                    <div class="logo-text">Eliminación Jurídica de Deudas de Tránsito</div>
+                </div>
             </div>
-            <div class="mobile-menu">☰</div>
-            <nav class="nav-menu">
-                <ul>
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#precios">Precio</a></li>
-                    <li><a href="#caracteristicas">Características</a></li>
-                    <li><a href="#garantia">Garantía</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                </ul>
-            </nav>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero" id="inicio">
-        <div class="container hero-content">
-            <h1>Eliminamos tus multas de tránsito legalmente</h1>
-            <p>Servicio jurídico especializado en la eliminación de comparendos, fotomultas y cobros coactivos en todo el país</p>
-            <a href="#contacto" class="btn">Contactar Ahora</a>
+    <section class="hero">
+        <div class="container">
+            <h1>Elimina Tus Deudas de Tránsito de Forma Legal y Definitiva</h1>
+            <p>¿Tienes comparendos, fotomultas o cobros coactivos? Te ayudamos a eliminarlos de manera jurídica. Expertos en resolución de casos en todo el país.</p>
+            <div class="price-tag">Desde $95.000</div>
+            <a href="https://wa.me/573127593036" class="btn-whatsapp" target="_blank">
+                <i class="fab fa-whatsapp"></i> Contáctanos por WhatsApp
+            </a>
         </div>
     </section>
 
-    <!-- Sección de Precios -->
-    <section class="pricing" id="precios">
+    <!-- Sección de características -->
+    <section class="features">
         <div class="container">
-            <h2 class="section-title">Nuestro Servicio</h2>
-            <p class="section-subtitle">Las deudas que tenga con Transito deben tener mas de 6 Años</p>
-            
-            <div class="price-card">
-                <div class="price-badge"> Antiguedad seis años </div>
-                <h3>Eliminación Jurídica  </h3>
-                <div class="price">$95.000</div>
-                <p class="price-period">Pago único al completar el servicio</p>
-                
-                <ul class="price-features">
-                    <li>Eliminación de comparendos</li>
-                    <li>Eliminación de fotomultas</li>
-                    <li>Eliminación de cobros coactivos</li>
-                    <li>Eliminación de acuerdos de pago</li>
-                    <li>Servicio en todo el país</li>
-                    <li>Asesoría legal especializada</li>
-                </ul>
-                
-                <a href="#contacto" class="btn">Solicitar Servicio</a>
+            <div class="section-title">
+                <h2>¿Qué Eliminamos?</h2>
+                <p>Nuestro servicio de eliminación jurídica cubre todos los tipos de deudas de tránsito</p>
             </div>
-        </div>
-    </section>
-
-    <!-- Sección de Características -->
-    <section class="features" id="caracteristicas">
-        <div class="container">
-            <h2 class="section-title">Nuestras Características</h2>
-            <p class="section-subtitle">Servicio completo de eliminación jurídica de multas</p>
-            
             <div class="features-grid">
                 <div class="feature-card">
-                    <div class="feature-icon">⚖️</div>
-                    <h3 class="feature-title">Eliminación de Comparendos</h3>
-                    <p>Proceso legal para eliminar comparendos de tránsito de manera definitiva.</p>
+                    <div class="feature-icon">
+                        <i class="fas fa-car-crash"></i>
+                    </div>
+                    <h3>Comparendos</h3>
+                    <p>Eliminamos todo tipo de comparendos por infracciones de tránsito, sin importar su antigüedad.</p>
                 </div>
-                
                 <div class="feature-card">
-                    <div class="feature-icon">📸</div>
-                    <h3 class="feature-title">Eliminación de Fotomultas</h3>
-                    <p>Anulación de multas captadas por sistemas de fotodetección en todo el país.</p>
+                    <div class="feature-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h3>Fotomultas</h3>
+                    <p>Librate de las fotomultas y cámaras de seguridad que detectan infracciones automáticamente.</p>
                 </div>
-                
                 <div class="feature-card">
-                    <div class="feature-icon">💳</div>
-                    <h3 class="feature-title">Eliminación de Cobros Coactivos</h3>
-                    <p>Suspensión y eliminación de procesos de cobro coactivo por multas vencidas.</p>
+                    <div class="feature-icon">
+                        <i class="fas fa-gavel"></i>
+                    </div>
+                    <h3>Cobros Coactivos</h3>
+                    <p>Resolvemos procesos de cobro coactivo iniciados por entidades de tránsito a nivel nacional.</p>
                 </div>
-                
                 <div class="feature-card">
-                    <div class="feature-icon">📝</div>
-                    <h3 class="feature-title">Eliminación de Acuerdos de Pago</h3>
-                    <p>Cancelación de acuerdos de pago pendientes por infracciones de tránsito.</p>
+                    <div class="feature-icon">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <h3>Acuerdos de Pago</h3>
+                    <p>Cancelamos acuerdos de pago pendientes y te ayudamos a regularizar tu situación.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Sección de Garantía -->
-    <section class="guarantee" id="garantia">
+    <!-- Sección de garantía -->
+    <section class="guarantee">
         <div class="container">
-            <h2 class="section-title">Nuestra Garantía</h2>
-            
             <div class="guarantee-content">
-                <div class="guarantee-icon">✅</div>
-                <h3>No solicitamos dinero de anticipo</h3>
-                <p>Solo pagas cuando hayamos eliminado tus multas de tránsito. Trabajamos con transparencia y resultados comprobables.</p>
-                <p>Nuestro equipo de abogados especializados en derecho de tránsito garantiza un proceso seguro y efectivo.</p>
+                <div class="guarantee-badge">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h2>Garantía de Resultados</h2>
+                <p>En <strong>Eliminación Jurídica de Deudas de Tránsito</strong> trabajamos con transparencia y honestidad. <strong>No solicitamos dinero de anticipo</strong>, solo pagas cuando hayamos eliminado exitosamente tus deudas de tránsito. Confía en expertos especializados en resolución de casos en todo el país.</p>
             </div>
         </div>
     </section>
 
-    <!-- Sección de Contacto -->
-    <section class="contact" id="contacto">
+    <!-- CTA Section -->
+    <section class="cta">
         <div class="container">
-            <h2 class="section-title">Contáctanos</h2>
-            <p>¿Tienes multas pendientes? Escríbenos por WhatsApp y te asesoramos sin compromiso</p>
-            
-            <a href="https://wa.me/573127593036" class="whatsapp-btn" target="_blank">
-                <span class="whatsapp-icon">💬</span>
-                Contactanos por WhatsApp
+            <h2>¿Listo para Liberarte de Tus Deudas de Tránsito?</h2>
+            <p>Contáctanos hoy mismo para una consulta gratuita. Nuestros especialistas evaluarán tu caso y te explicarán el proceso paso a paso.</p>
+            <a href="https://wa.me/573127593036" class="btn-whatsapp" target="_blank">
+                <i class="fab fa-whatsapp"></i> Consulta Gratuita por WhatsApp
             </a>
         </div>
     </section>
@@ -547,62 +408,40 @@ function gtag_report_conversion(url) {
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-logo">
-                    <div class="logo-text">Eliminación Jurídica de Multas de Tránsito</div>
+                <div class="footer-info">
+                    <h3>Eliminación Jurídica de Deudas de Tránsito</h3>
+                    <p>Especialistas en la eliminación legal de comparendos, fotomultas y cobros coactivos en todo el país. Tu solución confiable para liberarte de deudas de tránsito de forma definitiva.</p>
                 </div>
-                
-                <ul class="footer-links">
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#precios">Precios</a></li>
-                    <li><a href="#caracteristicas">Características</a></li>
-                    <li><a href="#garantia">Garantía</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                </ul>
-                
-                <div class="copyright">
-                    &copy; Eliminación Jurídica de Multas de Tránsito. Todos los derechos reservados.
-                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Eliminación Jurídica de Deudas de Tránsito. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
 
-    <script>
-        // Menú móvil
-        document.querySelector('.mobile-menu').addEventListener('click', function() {
-            document.querySelector('.nav-menu').classList.toggle('active');
-        });
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/573127593036" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
-        // Cerrar menú al hacer clic en un enlace (en móviles)
-        document.querySelectorAll('.nav-menu a').forEach(link => {
-            link.addEventListener('click', function() {
-                if (window.innerWidth <= 768) {
-                    document.querySelector('.nav-menu').classList.remove('active');
+    <script>
+        // Código para optimización de Google Ads
+        // Evitar contenido engañoso o spam
+        document.addEventListener('DOMContentLoaded', function() {
+            // Asegurar que todos los enlaces externos tengan target="_blank"
+            const externalLinks = document.querySelectorAll('a[href^="http"]');
+            externalLinks.forEach(link => {
+                if (!link.getAttribute('target')) {
+                    link.setAttribute('target', '_blank');
                 }
             });
-        });
-
-        // Smooth scroll para enlaces internos
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                }
+            
+            // Asegurar que no hay contenido oculto
+            const hiddenElements = document.querySelectorAll('*[style*="display:none"], *[style*="visibility:hidden"]');
+            hiddenElements.forEach(el => {
+                console.warn('Elemento oculto detectado:', el);
             });
         });
     </script>
 </body>
-
 </html>
-
-
-
-
